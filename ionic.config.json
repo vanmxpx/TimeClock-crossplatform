@@ -1,5 +1,7 @@
 {
   "name": "TimeClock-mobile",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
