@@ -1,5 +1,5 @@
 {
-  "name": "TimeClock-mobile",
+  "name": "TimeClock-crossplatform",
   "integrations": {
     "cordova": {}
   },

@@ -34,7 +34,7 @@ export class AppComponent {
     prepareFunctional(): void {
 
         /*
-         *  https://github.com/katzer/cordova-plugin-local-notifications 
+         *  https://github.com/katzer/cordova-plugin-local-notifications
         */
 
         // this.localNotifications.schedule([{
@@ -62,7 +62,7 @@ export class AppComponent {
         // setInterval(() => this.presentToast('Priveеt'), 1000);
     }
 
-    private async presentToast(message) {
+    private async presentToast(message: string) {
         const toast = await this.toastController.create({
             message,
             duration: 3000
