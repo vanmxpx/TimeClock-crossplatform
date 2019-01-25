@@ -18,6 +18,15 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'display',
+        children: [
+          {
+            path: '',
+            loadChildren: '../display/display.module#DisplayModule'
+          }
+        ]
+      },
+      {
         path: 'tab2',
         children: [
           {
@@ -37,14 +46,14 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/tabs/display',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '/tabs/display',
     pathMatch: 'full'
   }
 ];
