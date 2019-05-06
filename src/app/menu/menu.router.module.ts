@@ -13,7 +13,7 @@ const routes: Routes = [
         children: [
           {
             path: '',
-            loadChildren: '../time-management/time-management.module#TimeManagementPageModule'
+            loadChildren: './time-management/time-management.module#TimeManagementPageModule'
           }
         ]
       },

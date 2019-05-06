@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MenuController } from '@ionic/angular';
 
 @Component({
     selector: 'tc-time-management',
@@ -6,21 +7,21 @@ import { Component } from '@angular/core';
     styleUrls: ['time-management.page.scss']
 })
 export class TimeManagementPage {
-  tst: string = 'fasfasfsf';
 
-  constructor() {
-    this.tst = '';
-  }
 
-  onClick() {
-    this.tst = '';
-  }
+    constructor(private menu: MenuController) { }
 
-  onClick2() {
-    this.tst = '';
-  }
+    openFirst() {
+        this.menu.enable(true, 'main');
+        this.menu.open('main');
+    }
 
-  onClick23() {
-    this.tst = '';
-  }
+    openEnd() {
+        this.menu.open('end');
+    }
+
+    openCustom() {
+        this.menu.enable(true, 'custom');
+        this.menu.open('custom');
+    }
 }

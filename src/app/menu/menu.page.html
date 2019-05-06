@@ -1,4 +1,4 @@
-<div class="wrapper mat-typography">
+<!-- <div class="wrapper mat-typography">
     <mat-toolbar>
         <span>FirstRow</span>
     </mat-toolbar>
@@ -8,4 +8,20 @@
     </mat-spinner>
     <button mat-raised-button color="primary">text</button>
     <mat-slide-toggle (change)="themeChange()">theme</mat-slide-toggle>
-</div>
+</div> -->
+
+<ion-menu side="start" menuId="main">
+    <div class="menu-wrapper mat-typography">
+        <h1>TimeClock</h1>
+        <mat-divider></mat-divider>
+        <mat-action-list>
+            <button mat-list-item>item</button>
+            <button mat-list-item>item</button>
+            <button mat-list-item>item</button>
+        </mat-action-list>
+    </div>
+</ion-menu>
+      
+<ion-router-outlet main></ion-router-outlet>
+
+      
