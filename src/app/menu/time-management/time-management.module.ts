@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { TimeManagementPage } from './time-management.page';
 import { MaterialModule } from 'src/app/material.module';
 import { MemberPanelComponent } from './member-panel/member-panel.component';
+import { TimeViewComponent } from './time-view/time-view.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,9 @@ import { MemberPanelComponent } from './member-panel/member-panel.component';
     FormsModule,
         RouterModule.forChild([{ path: '', component: TimeManagementPage }])
   ],
-    declarations: [TimeManagementPage, MemberPanelComponent]
+    declarations: [
+        TimeManagementPage, 
+        MemberPanelComponent,
+        TimeViewComponent]
 })
 export class TimeManagementPageModule {}

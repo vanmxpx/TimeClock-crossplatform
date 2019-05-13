@@ -1,0 +1,9 @@
+<div class="member-panel-wrapper"> 
+    <table>
+        <tr *ngFor="let timeTuple of timeTuples; "> <!--  trackBy:item.id -->
+            <td> {{ timeTuple.in }} </td>
+            <td> {{ timeTuple.out }} </td>
+        </tr>
+    </table>
+    
+</div>

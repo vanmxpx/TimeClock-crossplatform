@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Platform } from '@ionic/angular';
-import { PlatformType } from 'src/models/platform/platform-type';
+import { PlatformType } from 'src/models/core/platform/platform-type';
 
 @Injectable({
   providedIn: 'root'

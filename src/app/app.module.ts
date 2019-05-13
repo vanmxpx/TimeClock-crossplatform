@@ -12,6 +12,7 @@ import { LocalNotifications } from '@ionic-native/local-notifications/ngx';
 import { PhonegapLocalNotification } from '@ionic-native/phonegap-local-notification/ngx';
 import { MaterialModule } from './material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
     declarations: [
@@ -21,6 +22,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     entryComponents: [],
     imports: [
         BrowserModule,
+        HttpClientModule,
         BrowserAnimationsModule,
         IonicModule.forRoot(),
         AppRoutingModule,

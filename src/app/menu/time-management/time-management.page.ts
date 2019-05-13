@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
 import { MenuController } from '@ionic/angular';
+import { TCDataService } from 'src/services/tc-data.service';
+import { TimeTuple } from 'src/models/time/time-tuple';
+import { MemberStatus } from 'src/models/subordinates/member-status';
+import { Member } from 'src/models/subordinates/member';
 
 @Component({
     selector: 'tc-time-management',
@@ -7,10 +11,18 @@ import { MenuController } from '@ionic/angular';
     styleUrls: ['time-management.page.scss']
 })
 export class TimeManagementPage {
+    member: Member;
+    memberStatus: MemberStatus;
+    timeTuples: TimeTuple[];
 
+    constructor(private menu: MenuController,
+        private dataService: TCDataService) { }
 
-    constructor(private menu: MenuController) { }
-
+    onInit() { 
+        this.member = this.dataService.getMember('temp');
+        this.memberStatus = this.dataService.getMemberStatus('temp');
+        this.timeTuples = this.dataService.getMemberTime('temp');
+    }
     openFirst() {
         this.menu.enable(true, 'main');
         this.menu.open('main');

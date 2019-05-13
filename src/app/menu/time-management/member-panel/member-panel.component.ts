@@ -1,15 +1,19 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
+import { Member } from 'src/models/subordinates/member';
+import { MemberStatus } from 'src/models/subordinates/member-status';
 
 @Component({
-  selector: 'member-panel',
-  templateUrl: './member-panel.component.html',
-  styleUrls: ['./member-panel.component.scss']
+    selector: 'tc-member-panel',
+    templateUrl: './member-panel.component.html',
+    styleUrls: ['./member-panel.component.scss']
 })
 export class MemberPanelComponent implements OnInit {
 
-  constructor() { }
+    @Input() member: Member;
+    @Input() memberStatus: MemberStatus;
+    constructor() { }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
 
 }
