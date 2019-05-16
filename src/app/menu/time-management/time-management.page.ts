@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MenuController } from '@ionic/angular';
 import { TCDataService } from 'src/services/tc-data.service';
 import { TimeTuple } from 'src/models/time/time-tuple';
@@ -10,7 +10,7 @@ import { Member } from 'src/models/subordinates/member';
     templateUrl: 'time-management.page.html',
     styleUrls: ['time-management.page.scss']
 })
-export class TimeManagementPage {
+export class TimeManagementPage implements OnInit {
     member: Member;
     memberStatus: MemberStatus;
     timeTuples: TimeTuple[];
@@ -18,7 +18,7 @@ export class TimeManagementPage {
     constructor(private menu: MenuController,
         private dataService: TCDataService) { }
 
-    onInit() { 
+    ngOnInit() { 
         this.member = this.dataService.getMember('temp');
         this.memberStatus = this.dataService.getMemberStatus('temp');
         this.timeTuples = this.dataService.getMemberTime('temp');

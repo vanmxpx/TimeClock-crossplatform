@@ -8,7 +8,21 @@
     border: 1px solid black;
   }
 
-.member-panel-wrapper {
+.time-view-wrapper {
     height: 100%;
     width: 100%;
+}
+
+.time-grid {
+    display: flex;
+    flex-direction: column;
+        height: 100%;
+        width: 100%;
+    .time-grid-row {
+        display: flex;
+        flex-direction: row;
+        .time-grid-cell {
+            width: 50%;
+        }  
+    }
 }

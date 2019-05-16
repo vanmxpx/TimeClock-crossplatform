@@ -1,9 +1,9 @@
-<div class="member-panel-wrapper"> 
-    <table>
-        <tr *ngFor="let timeTuple of timeTuples; "> <!--  trackBy:item.id -->
-            <td> {{ timeTuple.in }} </td>
-            <td> {{ timeTuple.out }} </td>
-        </tr>
-    </table>
+<div class="time-view-wrapper"> 
+    <div class="time-grid">
+        <div class="time-grid-row" *ngFor="let timeTuple of timeTuples;"> <!--  trackBy:item.id -->
+            <div class="time-grid-cell"> {{ timeTuple.in | date: 'HH:mm' }} </div>
+            <div class="time-grid-cell"> {{ timeTuple.out | date: 'HH:mm' }} </div>
+        </div>
+    </div>
     
 </div>
